@@ -1,5 +1,8 @@
 
 @import "./config/normalize";
-@import "./config/setup";
+@import "./config/shared";
+@import './config/mixins';
 
 @import "./header";
+@import "./about";
+

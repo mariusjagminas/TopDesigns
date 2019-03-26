@@ -1,0 +1,7 @@
+// ------- Media Queries --------- //
+
+@mixin phone {
+  @media (min-width: 600px) and (min-height: 400px) {
+    @content;
+  }
+}

@@ -1,0 +1,70 @@
+*, *:before ,*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #454545;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.text-light {
+color: #ffffff;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// -------- Section Title ---------- //
+
+.section-title {
+  color: #ffffff;
+  display: inline-block;
+}
+
+.section-title__top-text {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.66em;
+  font-weight: 300;
+  position: relative;
+  text-align: center;
+}
+
+.section-title__main-text {
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 0.04em;
+  letter-spacing: 0.02em;
+}
+
+.section-title__top-text::before,
+.section-title__top-text::after {
+  content: "";
+  display: inline-block;
+  background: #ffffff;
+  width: 28%;
+  height: 1px;
+  top: 60%;
+  position: absolute;
+}
+
+.section-title__top-text::before {
+  left: 0.5em;
+}
+
+.section-title__top-text::after {
+  right: 0.5em;
+}

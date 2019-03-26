@@ -30,11 +30,16 @@ function serve(cb){
 }
 
 function develop(cb){
-  watch("src/pages/*.html", series(copyHTML,reload));
+  watch("dist/**/*.html", reloadPage);
   watch('src/sass/**/*.scss', series(sassCompile))
-  watch('src/js/**/*.js', series(copyJs,reload))
+  watch('src/js/**/*.js', series(copyJs,reloadPage))
+  cb();
+}
+
+function reloadPage(cb){
+  reload();
   cb();
 }
 
 
-exports.default = series(copyHTML,sassCompile,copyJs,serve, develop);
+exports.default = series(sassCompile,copyJs,serve, develop);
