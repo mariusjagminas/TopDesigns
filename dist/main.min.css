@@ -303,11 +303,13 @@ template {
 [hidden] {
   display: none; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 18px;
   line-height: 22px;
   color: #454545;
@@ -328,12 +330,15 @@ img {
 
 .section-title {
   color: #ffffff;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 9px;
+  margin-top: 4em; }
 
 .section-title__top-text {
   font-family: "Dosis", sans-serif;
   font-size: 1.66em;
   font-weight: 300;
+  margin: 0px;
   position: relative;
   text-align: center; }
 
@@ -341,7 +346,7 @@ img {
   text-transform: uppercase;
   font-size: 4em;
   font-weight: 700;
-  margin: 0;
+  margin: 0.2em 0 0 0;
   padding-top: 0.04em;
   letter-spacing: 0.02em; }
 
@@ -360,6 +365,32 @@ img {
 
 .section-title__top-text::after {
   right: 0.5em; }
+
+@media (min-width: 600px) and (min-height: 400px) {
+  .section-title {
+    font-size: 12px;
+    margin-top: 5.4em; } }
+
+.section-header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+
+.section-header__frame {
+  min-height: 140px;
+  width: 100%;
+  max-width: 1020px;
+  border: 2px solid #f9fdfc;
+  display: flex;
+  justify-content: center; }
+
+@media (min-width: 600px) and (min-height: 400px) {
+  .section-header {
+    padding: 50px; }
+  .section-header__frame {
+    height: 200px; } }
 
 .header {
   position: fixed;
@@ -399,7 +430,8 @@ img {
 
 .s-media__link > i {
   font-size: 27px;
-  color: #101010; }
+  color: #101010;
+  transition: 0.3s ease-out; }
 
 .navigation {
   position: relative;
@@ -492,6 +524,9 @@ img {
     height: 45px; }
   .s-media {
     display: flex; }
+  .s-media__link > i:hover {
+    transform: scale(1.1);
+    opacity: 0.6; }
   .navigation {
     background: #101010;
     width: 258px; }
@@ -527,9 +562,6 @@ img {
   align-items: center;
   padding-top: 145px; }
 
-.section-title--about-us {
-  font-size: 8px; }
-
 .about-us__btn {
   text-decoration: none;
   text-transform: uppercase;
@@ -544,8 +576,8 @@ img {
 .about-us__arrows:after {
   border-bottom: 1px solid #ffffff;
   border-left: 1px solid #ffffff;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   transform: rotateZ(-45deg);
   transition: 0.3s ease-in-out; }
 
@@ -558,19 +590,55 @@ img {
 
 .about-us__arrows {
   position: relative;
-  margin-top: 20px; }
+  margin-top: 40px; }
 
 @media (min-width: 600px) and (min-height: 400px) {
   .about-us {
-    min-height: 680px; }
+    min-height: 680px;
+    padding-top: 155px; }
   .section-title--about-us {
-    font-size: 18px;
-    margin-top: 80px; }
+    font-size: 18px; }
+  .main-text--about-us {
+    margin-top: 30px; }
   .about-us__btn {
     font-size: 18px;
     padding: 12px 52px;
     margin-top: 67px; }
   .about-us__arrows {
     margin-top: 153px; }
-  .about-us__arrows:hover {
-    transform: rotatez(-45deg) scale(1.3) translate(-6px, 6px); } }
+  .about-us__arrows,
+  .about-us__arrows:after {
+    width: 15px;
+    height: 15px; }
+  .about-us__arrows {
+    animation: arrow;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite; }
+  @keyframes arrow {
+    0% {
+      transform: rotatez(-45deg); }
+    50% {
+      transform: rotatez(-45deg) translate(-10px, 10px); }
+    75% {
+      transform: rotatez(-45deg); }
+    100% {
+      transform: rotatez(-45deg); } } }
+
+.features {
+  width: 100%;
+  height: 450px; }
+
+.section-header--team {
+  background: url(./img/our-team-bg.jpg); }
+
+.team {
+  min-height: 1580px; }
+
+.portfolio {
+  min-height: 1007px; }
+
+.section-header--portfolio {
+  background: url(./img/portfolio-bg.jpg); }
+
+.section-header--brands {
+  background: url(./img/brands-bg.jpg); }

@@ -1,9 +1,11 @@
-*, *:before ,*:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 18px;
   line-height: 22px;
   color: #454545;
@@ -17,7 +19,7 @@ img {
 }
 
 .text-light {
-color: #ffffff;
+  color: #ffffff;
 }
 
 .container {
@@ -31,12 +33,15 @@ color: #ffffff;
 .section-title {
   color: #ffffff;
   display: inline-block;
+  font-size: 9px;
+  margin-top: 4em;
 }
 
 .section-title__top-text {
   font-family: "Dosis", sans-serif;
   font-size: 1.66em;
   font-weight: 300;
+  margin: 0px;
   position: relative;
   text-align: center;
 }
@@ -45,7 +50,7 @@ color: #ffffff;
   text-transform: uppercase;
   font-size: 4em;
   font-weight: 700;
-  margin: 0;
+  margin: 0.2em 0 0 0;
   padding-top: 0.04em;
   letter-spacing: 0.02em;
 }
@@ -67,4 +72,40 @@ color: #ffffff;
 
 .section-title__top-text::after {
   right: 0.5em;
+}
+
+@include phone {
+  .section-title {
+    font-size: 12px;
+    margin-top: 5.4em;
+  }
+}
+
+// ------- Section Header --------//
+
+.section-header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.section-header__frame {
+  min-height: 140px;
+  width: 100%;
+  max-width: 1020px;
+  border: 2px solid #f9fdfc;
+  display: flex;
+  justify-content: center;
+}
+
+@include phone {
+  .section-header {
+    padding: 50px;
+  }
+
+  .section-header__frame {
+    height: 200px;
+  }
 }

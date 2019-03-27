@@ -1,8 +1,12 @@
 
 @import "./config/normalize";
-@import "./config/shared";
 @import './config/mixins';
+@import "./config/shared";
 
 @import "./header";
 @import "./about";
+@import "./features";
+@import "./team";
+@import "./portfolio";
+@import "./brands";
 
