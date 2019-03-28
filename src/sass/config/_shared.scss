@@ -46,21 +46,12 @@ img {
   text-align: center;
 }
 
-.section-title__main-text {
-  text-transform: uppercase;
-  font-size: 4em;
-  font-weight: 700;
-  margin: 0.2em 0 0 0;
-  padding-top: 0.04em;
-  letter-spacing: 0.02em;
-}
-
 .section-title__top-text::before,
 .section-title__top-text::after {
   content: "";
   display: inline-block;
   background: #ffffff;
-  width: 28%;
+  width: 13%;
   height: 1px;
   top: 60%;
   position: absolute;
@@ -74,7 +65,21 @@ img {
   right: 0.5em;
 }
 
-@include phone {
+.top-text--short:before, .top-text--short:after {
+  width: 28%;
+}
+
+.section-title__main-text {
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0.2em 0 0 0;
+  padding-top: 0.04em;
+  letter-spacing: 0.02em;
+}
+
+
+@include medium-scr-and-up {
   .section-title {
     font-size: 12px;
     margin-top: 5.4em;
@@ -100,7 +105,7 @@ img {
   justify-content: center;
 }
 
-@include phone {
+@include medium-scr-and-up {
   .section-header {
     padding: 50px;
   }

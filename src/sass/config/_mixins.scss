@@ -1,7 +1,13 @@
 // ------- Media Queries --------- //
 
-@mixin phone {
+@mixin medium-scr-and-up {
   @media (min-width: 600px) and (min-height: 400px) {
+    @content;
+  }
+}
+
+@mixin large-scr-and-up {
+  @media (min-width: 780px) {
     @content;
   }
 }

@@ -142,7 +142,7 @@
   padding: 20px;
 }
 
-@include phone {
+@include medium-scr-and-up {
   .header {
     height: 80px;
     background: linear-gradient(90deg, #ffff 50%, #101010 50%);

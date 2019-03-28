@@ -42,7 +42,7 @@
   margin-top: 40px;
 }
 
-@include phone {
+@include medium-scr-and-up {
   .about-us {
     min-height: 680px;
     padding-top: 155px;
