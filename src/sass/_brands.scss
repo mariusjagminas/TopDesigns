@@ -2,8 +2,93 @@
   background-image: url(./img/brands-bg.jpg);
 }
 
-.test {
-  background: red;
-  width: 20%;
-  padding-top: 10%;
+.brands__container {
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.brands__container--inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.block,
+.brand {
+  position: relative;
+  border-right: 1px solid #e7e6e6;
+  width: 33.3%;
+}
+
+.block {
+  padding-top: 4.77%;
+}
+
+.brand {
+  padding-top: 33.3%;
+}
+
+.brand:nth-child(n + 4),
+.block:nth-child(n + 4) {
+  display: none;
+}
+
+@for $i from 1 through 28 {
+  .brand-#{$i}::before {
+    background-image: url(./img/logo-#{$i}.png);
+  }
+}
+
+.brand::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 39%;
+  filter: grayscale(100%) opacity(20%);
+  transition: 1s;
+}
+
+.brand:hover::before {
+  filter: grayscale(0%) opacity(100%);
+}
+
+@include medium-scr-and-up {
+  .brand,
+  .block {
+    width: 25%;
+  }
+
+  .brand {
+    padding-top: 25%;
+  }
+
+  .brand:nth-child(4),
+  .block:nth-child(4) {
+    display: initial;
+  }
+}
+
+@include x-large-scr-and-up {
+  .brand,
+  .block {
+    width: 14.28%;
+  }
+
+  .brand {
+    padding-top: 13.1%;
+  }
+
+  .brand:nth-child(n + 5), 
+  .block:nth-child(n + 5) {
+    display: initial;
+  }
+
+  .brand:nth-child(7n),
+  .block:nth-child(7n) {
+    border-right: none;
+  }
 }

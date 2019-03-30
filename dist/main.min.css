@@ -831,10 +831,152 @@ img {
 .section-header--brands {
   background-image: url(./img/brands-bg.jpg); }
 
-.test {
-  background: red;
-  width: 20%;
-  padding-top: 10%; }
+.brands__container {
+  border-bottom: 1px solid #e7e6e6; }
+
+.brands__container--inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex; }
+
+.block,
+.brand {
+  position: relative;
+  border-right: 1px solid #e7e6e6;
+  width: 33.3%; }
+
+.block {
+  padding-top: 4.77%; }
+
+.brand {
+  padding-top: 33.3%; }
+
+.brand:nth-child(n + 4),
+.block:nth-child(n + 4) {
+  display: none; }
+
+.brand-1::before {
+  background-image: url(./img/logo-1.png); }
+
+.brand-2::before {
+  background-image: url(./img/logo-2.png); }
+
+.brand-3::before {
+  background-image: url(./img/logo-3.png); }
+
+.brand-4::before {
+  background-image: url(./img/logo-4.png); }
+
+.brand-5::before {
+  background-image: url(./img/logo-5.png); }
+
+.brand-6::before {
+  background-image: url(./img/logo-6.png); }
+
+.brand-7::before {
+  background-image: url(./img/logo-7.png); }
+
+.brand-8::before {
+  background-image: url(./img/logo-8.png); }
+
+.brand-9::before {
+  background-image: url(./img/logo-9.png); }
+
+.brand-10::before {
+  background-image: url(./img/logo-10.png); }
+
+.brand-11::before {
+  background-image: url(./img/logo-11.png); }
+
+.brand-12::before {
+  background-image: url(./img/logo-12.png); }
+
+.brand-13::before {
+  background-image: url(./img/logo-13.png); }
+
+.brand-14::before {
+  background-image: url(./img/logo-14.png); }
+
+.brand-15::before {
+  background-image: url(./img/logo-15.png); }
+
+.brand-16::before {
+  background-image: url(./img/logo-16.png); }
+
+.brand-17::before {
+  background-image: url(./img/logo-17.png); }
+
+.brand-18::before {
+  background-image: url(./img/logo-18.png); }
+
+.brand-19::before {
+  background-image: url(./img/logo-19.png); }
+
+.brand-20::before {
+  background-image: url(./img/logo-20.png); }
+
+.brand-21::before {
+  background-image: url(./img/logo-21.png); }
+
+.brand-22::before {
+  background-image: url(./img/logo-22.png); }
+
+.brand-23::before {
+  background-image: url(./img/logo-23.png); }
+
+.brand-24::before {
+  background-image: url(./img/logo-24.png); }
+
+.brand-25::before {
+  background-image: url(./img/logo-25.png); }
+
+.brand-26::before {
+  background-image: url(./img/logo-26.png); }
+
+.brand-27::before {
+  background-image: url(./img/logo-27.png); }
+
+.brand-28::before {
+  background-image: url(./img/logo-28.png); }
+
+.brand::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 39%;
+  filter: grayscale(100%) opacity(20%);
+  transition: 1s; }
+
+.brand:hover::before {
+  filter: grayscale(0%) opacity(100%); }
+
+@media (min-width: 600px) and (min-height: 400px) {
+  .brand,
+  .block {
+    width: 25%; }
+  .brand {
+    padding-top: 25%; }
+  .brand:nth-child(4),
+  .block:nth-child(4) {
+    display: initial; } }
+
+@media (min-width: 1200px) {
+  .brand,
+  .block {
+    width: 14.28%; }
+  .brand {
+    padding-top: 13.1%; }
+  .brand:nth-child(n + 5),
+  .block:nth-child(n + 5) {
+    display: initial; }
+  .brand:nth-child(7n),
+  .block:nth-child(7n) {
+    border-right: none; } }
 
 .footer {
   background: #101010; }

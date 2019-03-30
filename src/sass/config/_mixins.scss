@@ -11,3 +11,9 @@
     @content;
   }
 }
+
+@mixin x-large-scr-and-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
