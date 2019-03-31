@@ -32,9 +32,15 @@
   display: none;
 }
 
-@for $i from 1 through 28 {
-  .brand-#{$i}::before {
-    background-image: url(./img/logo-#{$i}.png);
+$count: 1;
+@for $i from 2 through 5 {
+  @for $x from 1 through 7 {
+    .brands__container:nth-of-type(#{$i}) >
+      .brands__container--inner
+      .brand:nth-child(#{$x})::before {
+      background-image: url(./img/logo-#{$count}.png);
+    }
+    $count: $count + 1;
   }
 }
 
@@ -82,7 +88,7 @@
     padding-top: 13.1%;
   }
 
-  .brand:nth-child(n + 5), 
+  .brand:nth-child(n + 5),
   .block:nth-child(n + 5) {
     display: initial;
   }

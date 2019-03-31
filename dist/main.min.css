@@ -855,88 +855,144 @@ img {
 .block:nth-child(n + 4) {
   display: none; }
 
-.brand-1::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(1)::before {
   background-image: url(./img/logo-1.png); }
 
-.brand-2::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(2)::before {
   background-image: url(./img/logo-2.png); }
 
-.brand-3::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(3)::before {
   background-image: url(./img/logo-3.png); }
 
-.brand-4::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(4)::before {
   background-image: url(./img/logo-4.png); }
 
-.brand-5::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(5)::before {
   background-image: url(./img/logo-5.png); }
 
-.brand-6::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(6)::before {
   background-image: url(./img/logo-6.png); }
 
-.brand-7::before {
+.brands__container:nth-of-type(2) >
+.brands__container--inner
+.brand:nth-child(7)::before {
   background-image: url(./img/logo-7.png); }
 
-.brand-8::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(1)::before {
   background-image: url(./img/logo-8.png); }
 
-.brand-9::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(2)::before {
   background-image: url(./img/logo-9.png); }
 
-.brand-10::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(3)::before {
   background-image: url(./img/logo-10.png); }
 
-.brand-11::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(4)::before {
   background-image: url(./img/logo-11.png); }
 
-.brand-12::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(5)::before {
   background-image: url(./img/logo-12.png); }
 
-.brand-13::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(6)::before {
   background-image: url(./img/logo-13.png); }
 
-.brand-14::before {
+.brands__container:nth-of-type(3) >
+.brands__container--inner
+.brand:nth-child(7)::before {
   background-image: url(./img/logo-14.png); }
 
-.brand-15::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(1)::before {
   background-image: url(./img/logo-15.png); }
 
-.brand-16::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(2)::before {
   background-image: url(./img/logo-16.png); }
 
-.brand-17::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(3)::before {
   background-image: url(./img/logo-17.png); }
 
-.brand-18::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(4)::before {
   background-image: url(./img/logo-18.png); }
 
-.brand-19::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(5)::before {
   background-image: url(./img/logo-19.png); }
 
-.brand-20::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(6)::before {
   background-image: url(./img/logo-20.png); }
 
-.brand-21::before {
+.brands__container:nth-of-type(4) >
+.brands__container--inner
+.brand:nth-child(7)::before {
   background-image: url(./img/logo-21.png); }
 
-.brand-22::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(1)::before {
   background-image: url(./img/logo-22.png); }
 
-.brand-23::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(2)::before {
   background-image: url(./img/logo-23.png); }
 
-.brand-24::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(3)::before {
   background-image: url(./img/logo-24.png); }
 
-.brand-25::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(4)::before {
   background-image: url(./img/logo-25.png); }
 
-.brand-26::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(5)::before {
   background-image: url(./img/logo-26.png); }
 
-.brand-27::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(6)::before {
   background-image: url(./img/logo-27.png); }
 
-.brand-28::before {
+.brands__container:nth-of-type(5) >
+.brands__container--inner
+.brand:nth-child(7)::before {
   background-image: url(./img/logo-28.png); }
 
 .brand::before {
