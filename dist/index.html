@@ -37,16 +37,16 @@
             <p class="navigation__text">menu</p>
             <ul class="navigation__list ">
               <li class="navigation__item">
-                <a class="navigation__link" href="#!">Home</a>
+                <a class="navigation__link" href="#home">Home</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#!">About us</a>
+                <a class="navigation__link" href="#team">About us</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#!">Portfolio</a>
+                <a class="navigation__link" href="#porfolio">Portfolio</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#!">Contact</a>
+                <a class="navigation__link" href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -54,19 +54,47 @@
       </div>
     </header>
    <!-- About-us section starts here -->
-    <section class="about-us">
+    <section id="home" class="about-us">
       <div class="section-title section-title--about-us">
         <p class="section-title__top-text top-text--short">Nead our help?</p>
         <h2 class="section-title__main-text main-text--about-us">top designers</h2>
       </div>
-      <a href="#!" class="text-light about-us__btn">check us!</a>
-      <a href="#!" class="about-us__arrows"></a>
+      <a href="#features" class="text-light about-us__btn">check us!</a>
+      <a href="#features" class="about-us__arrows"></a>
     </section>
    <!-- Features section starts here -->
-    <section class="features container">
+
+    <section id="features" class="features container">
+      <div class="feature">
+        <div id="projects" class="feature__progress">
+          <p class="feature__progress-text">big projects</p>
+        </div>
+        <p class="feature__text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+        </p>
+      </div>
+   
+      <div class="feature">
+        <div id="clients" class="feature__progress">
+          <p class="feature__progress-text">clients</p>
+        </div>
+        <p class="feature__text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+      </div>
+   
+      <div class="feature">
+        <div id="months" class="feature__progress">
+          <p class="feature__progress-text">months</p>
+        </div>
+        <p class="feature__text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia?
+        </p>
+      </div>
     </section>
+
    <!-- Team section starts here -->
-   <section class="team">
+   <section id="team" class="team">
 
      <header class="section-header section-header--team">
         <div class="section-header__frame">
@@ -149,7 +177,7 @@
       </div>
    </section>
    <!-- Portfolio section starts here -->
-   <section class="portfolio">
+   <section id="porfolio" class="portfolio">
 
      <header class="section-header section-header--portfolio">
         <div class="section-header__frame">
@@ -227,7 +255,7 @@
      </div>
    </section>
    <!-- Brands section starts here -->
-   <section class="brands">
+   <section id="brands" class="brands">
 
      <header class="section-header section-header--brands">
         <div class="section-header__frame">
@@ -312,7 +340,7 @@
 
    </section>
    <!-- Footer starts here -->
-   <footer class="footer">
+   <footer id="contact" class="footer">
       <div class="container container--footer">
         
         <div class="footer-card">
@@ -337,6 +365,8 @@
         <p class="copyright__notice">Copyright &copy DSGN free to use</p>
       </div>
     </footer>
-    <!-- <script src="bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="progressbar.min.js"></script>
+    <script src="bundle.min.js"></script>
   </body>
 </html>

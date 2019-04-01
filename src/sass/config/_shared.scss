@@ -65,7 +65,8 @@ img {
   right: 0.5em;
 }
 
-.top-text--short:before, .top-text--short:after {
+.top-text--short:before,
+.top-text--short:after {
   width: 28%;
 }
 
@@ -77,7 +78,6 @@ img {
   padding-top: 0.04em;
   letter-spacing: 0.02em;
 }
-
 
 @include medium-scr-and-up {
   .section-title {

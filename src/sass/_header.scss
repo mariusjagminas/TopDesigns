@@ -81,18 +81,6 @@
   top: 5px;
 }
 
-.is-pressed {
-  transform: rotateZ(45deg);
-}
-
-.is-pressed::before {
-  display: none;
-}
-
-.is-pressed::after {
-  transform: rotatez(90deg) translateX(-5px);
-}
-
 .navigation__text {
   font-weight: 300;
   color: #ffff;
@@ -124,9 +112,21 @@
   opacity: 0;
 }
 
-.is-active {
+.is-active .navigation__list {
   transform: translateY(0%);
   opacity: 1;
+}
+
+.is-active > .navigation__btn {
+  transform: rotateZ(45deg);
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    transform: rotatez(90deg) translateX(-5px);
+  }
 }
 
 .navigation__item {

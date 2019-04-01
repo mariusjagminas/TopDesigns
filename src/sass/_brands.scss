@@ -55,7 +55,7 @@ $count: 1;
   background-position: center;
   background-size: 39%;
   filter: grayscale(100%) opacity(20%);
-  transition: 1s;
+  @extend %transition-fast;
 }
 
 .brand:hover::before {
