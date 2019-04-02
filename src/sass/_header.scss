@@ -5,8 +5,6 @@
   height: 64px;
   z-index: 2;
   width: 100%;
-  -webkit-box-shadow: 0px -4px 5px 7px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 0px -4px 5px 7px rgba(0, 0, 0, 0.13);
   box-shadow: 0px -4px 5px 7px rgba(0, 0, 0, 0.13);
 }
 
@@ -104,8 +102,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  -webkit-box-shadow: 0px -4px 5px 7px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 0px -4px 5px 7px rgba(0, 0, 0, 0.13);
   box-shadow: 0px -4px 5px 7px rgba(0, 0, 0, 0.13);
   transform: translateY(-100%);
   transition: 0.3s ease;
