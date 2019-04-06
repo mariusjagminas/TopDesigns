@@ -15,6 +15,7 @@
   padding: 24px 10px;
 }
 
+
 .footer-card__title {
   font-size: 1.66em;
   font-weight: 400;
@@ -55,10 +56,10 @@
   .footer-card {
     flex-basis: 200px;
   }
-
+  
   .container--footer {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
   }
 
@@ -66,3 +67,4 @@
     padding-top: 20px;
   }
 }
+

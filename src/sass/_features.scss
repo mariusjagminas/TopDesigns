@@ -35,7 +35,7 @@
 @include medium-scr-and-up {
   .features {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: stretch;
     font-size: 13px;
   }

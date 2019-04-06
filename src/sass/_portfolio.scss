@@ -14,6 +14,7 @@
   width: 33.3%;
   position: relative;
   overflow: hidden;
+  display: none;
 }
 
 .portfolio__link::before {
@@ -23,7 +24,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  @extend %transition-fast
+  @extend %transition-fast;
 }
 
 .portfolio__link:before {
@@ -50,8 +51,8 @@
   transform: scale(1.4);
 }
 
-.portfolio__link:nth-child(n + 1) {
-  display: none;
+.portfolio__link:nth-child(-n + 9) {
+  display: block;
 }
 
 @include medium-scr-and-up {

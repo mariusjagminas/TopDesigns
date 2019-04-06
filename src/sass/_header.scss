@@ -9,7 +9,7 @@
 }
 
 .header__container {
-  background: #ffff;
+  background-color: #ffffff;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+
 }
 
 .s-media {
@@ -81,7 +82,7 @@
 
 .navigation__text {
   font-weight: 300;
-  color: #ffff;
+  color: #ffffff;
   margin: 20px;
   text-transform: uppercase;
   display: none;
@@ -141,7 +142,8 @@
 @include medium-scr-and-up {
   .header {
     height: 80px;
-    background: linear-gradient(90deg, #ffff 50%, #101010 50%);
+    background: linear-gradient(90deg, #ffffff 50%, #101010 50%);
+   
   }
 
   .logo {
@@ -164,12 +166,12 @@
   }
 
   .navigation__btn {
-    background: #ffff;
+    background: #ffffff;
   }
 
   .navigation__btn::before,
   .navigation__btn::after {
-    background: #ffff;
+    background: #ffffff;
   }
 
   .navigation__text {
@@ -190,7 +192,7 @@
 
   .navigation__link {
     text-decoration: none;
-    color: #ffff;
+    color: #ffffff;
     display: block;
     text-transform: uppercase;
   }

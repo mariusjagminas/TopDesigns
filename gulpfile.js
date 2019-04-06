@@ -10,8 +10,10 @@ const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const ghpages = require("gh-pages");
 const clean = require("gulp-clean");
+const rename = require("gulp-rename");
 
 // ----- Development --------------//
+
 function copyHTML(cb) {
   src("src/*.html").pipe(dest("dist/"));
   cb();
@@ -20,6 +22,14 @@ function copyHTML(cb) {
 function sassCompile(cb) {
   src("src/sass/**/*.scss")
     .pipe(sass().on("error", sass.logError))
+    .pipe(
+      rename({
+        basename: "styles",
+        suffix: ".min",
+        extname: ".css"
+      })
+    )
+    
     .pipe(dest("dist/"))
     .pipe(browserSync.stream());
   cb();
@@ -76,6 +86,13 @@ function buildCSS(cb) {
       })
     )
     .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(
+      rename({
+        basename: "styles",
+        suffix: ".min",
+        extname: ".css"
+      })
+    )
     .pipe(dest("dist/"));
   cb();
 }
@@ -87,6 +104,13 @@ function buildHTML(cb) {
   cb();
 }
 
+// ---- Custom Tasks ------------//
+
+function deleteFiles(cb) {
+  src(["dist/*.html", "dist/*.js", "dist/*.css"]).pipe(clean({ read: false }));
+  cb();
+}
+
 function optimizeImages(cb) {
   src("src/img/*")
     .pipe(imagemin({ verbose: true }))
@@ -94,24 +118,13 @@ function optimizeImages(cb) {
   cb();
 }
 
-// ----- Deploy on GH pages -------------/
-
 function deployGHPages(cb) {
   ghpages.publish("dist", err => console.log(err ? err : "Deployed !!!!!!!"));
   cb();
 }
 
-// ---- Delete files ------------//
-
-function deleteFiles(cb) {
-
-  src(["dist/*.html", "dist/*.js", "dist/*.css"]).pipe(clean({ read: false }));
-
-  cb();
-}
-
 exports.default = series(sassCompile, copyJS, copyHTML, serve, develop);
-exports.build = series(deleteFiles,buildJS, buildCSS, buildHTML, serve);
+exports.build = series(buildJS, buildCSS, buildHTML, serve);
 exports.image = optimizeImages;
-exports.deploy = series(deleteFiles,buildJS, buildCSS, buildHTML, deployGHPages);
+exports.deploy = deployGHPages;
 exports.delete = deleteFiles;

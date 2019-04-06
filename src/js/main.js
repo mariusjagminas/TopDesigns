@@ -21,9 +21,10 @@ const sharedOptions = {
   duration: 800,
   easing: "easeOut",
   step: (state, bar) => {
-    bar.setText(Math.round(bar.value() * 100));
+     bar.setText(Math.round(bar.value() * 100));
   }
 };
+
 
 const projects = new ProgressBar.Circle("#projects", {
   ...sharedOptions,
@@ -40,16 +41,28 @@ const months = new ProgressBar.Circle("#months", {
   color: "#152a3b"
 });
 
-window.addEventListener("scroll", animateProgresCircles);
+window.addEventListener("scroll", throttle(animateProgresCircles,200));
 const features = document.querySelector(".features");
 
 function animateProgresCircles() {
-  if (window.innerHeight > features.getBoundingClientRect().top + 200) {
+  if (window.innerHeight > features.getBoundingClientRect().top + 150) {
     projects.animate(0.5);
     clients.animate(0.35);
     months.animate(0.8);
   }
 }
+
+function throttle (callback, limit=5000) {
+  var wait = false;                  
+  return function () {               
+    if (!wait) {                  
+      callback.call();          
+      wait = true;              
+      setTimeout(function () {wait = false;  }, limit);   
+    }
+  }
+}
+
 
 // ---- Navigation menu -----------//
 
