@@ -29,7 +29,7 @@ function sassCompile(cb) {
         extname: ".css"
       })
     )
-    
+
     .pipe(dest("dist/"))
     .pipe(browserSync.stream());
   cb();
@@ -114,7 +114,7 @@ function deleteFiles(cb) {
 function optimizeImages(cb) {
   src("src/img/*")
     .pipe(imagemin({ verbose: true }))
-    .pipe(dest("dist/img"));
+    .pipe(dest("dist/optimized-images"));
   cb();
 }
 
