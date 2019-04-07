@@ -14,7 +14,7 @@ Live [Demo](https://mariusjagminas.github.io/TopDesigns/)
 
  ****
 
-[![alt text](dist\img\8-desktop.jpg)](https://mariusjagminas.github.io/TopDesigns/)
+[![alt text](https://github.com/mariusjagminas/TopDesigns/blob/master/dist/img/8-desktop.jpg)](https://mariusjagminas.github.io/TopDesigns/)
 
 
 
