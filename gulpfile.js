@@ -1,3 +1,8 @@
+// Gulp tasks:
+// gulp - launch development
+// gulp build - minify files to /dist folder
+// gulp deploy - deploys /dist folder on gh-pages branch
+
 const { series, watch, src, dest } = require("gulp");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
@@ -29,14 +34,19 @@ function sassCompile(cb) {
         extname: ".css"
       })
     )
-
     .pipe(dest("dist/"))
     .pipe(browserSync.stream());
   cb();
 }
 
+const javaScriptSrc = [
+  "src/js/progressbar.min.js",
+  "src/js/popup.js",
+  "src/js/main.js"
+];
+
 function copyJS(cb) {
-  src(["src/js/progressbar.min.js", "src/js/main.js"])
+  src(javaScriptSrc)
     .pipe(concat("bundle.min.js"))
     .pipe(dest("dist/"));
   cb();
@@ -64,7 +74,7 @@ function reloadPage(cb) {
 // --------- Production ---------------//
 
 function buildJS(cb) {
-  src(["src/js/progressbar.min.js", "src/js/main.js"])
+  src(javaScriptSrc)
     .pipe(concat("bundle.min.js"))
     .pipe(
       babel({
